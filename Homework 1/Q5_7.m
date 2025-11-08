@@ -1,6 +1,6 @@
 % ==============================================================
 %   Statistics and Adjustment Theory
-%   Author: Om Prakash Bhandari
+%   Author: Om Prakash Bhandari & Sandesh Pokhrel
 %   Date: 09.11.2025
 % ==============================================================
 
@@ -149,6 +149,7 @@ E_y2 = (4/3)*E_x - 27;
 
 fprintf('E[y1] = %d\n', E_y1);
 fprintf('E[y2] = %d\n', E_y2);
+
 
 
 % ========================================================= %

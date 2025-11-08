@@ -1,7 +1,7 @@
 % ==============================================================
 %   Statistics and Adjustment Theory
 %   Authors: Om Prakash Bhandari & Sandesh Pokhrel
-%   Date: 09.11.2025
+%   Date: 08.11.2025
 % ==============================================================
 
 
@@ -141,3 +141,4 @@ fprintf('Empirical probability of rolling a sum of 7: %.4f\n', ...
 
 
 % =============================================================== % 
+

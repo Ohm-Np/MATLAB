@@ -1,5 +1,5 @@
 % ==============================================================
-%   Coordinate Transformation of TLS Data
+%   Coordinate Transformation of TLS Data (Q1)
 %   Author: Om Prakash Bhandari
 %   Date: 21.11.2025
 % ==============================================================
@@ -19,17 +19,23 @@ for i = 1:length(files)
     data = load(infile);
 
     d     = data(:,1);
-    phiI  = data(:,2);     % inclination (from +z axis)
+    phiI  = data(:,2);
     theta = data(:,3);
 
     % ----- Convert inclination -> MATLAB elevation -----
     phiM = pi/2 - phiI;
 
     % ----- Spherical → Cartesian -----
+
+    % [x,y,z] = sph2cart(azimuth,elevation,r) transforms 
+    % corresponding elements of the spherical coordinate arrays
+    % azimuth, elevation, and r 
+    % to Cartesian, or xyz, coordinates
+
     [x, y, z] = sph2cart(theta, phiM, d);
     cartesian_points = [x, y, z];
 
-    % ----- Save output -----
+    % ----- Save output file -----
     outfile = "Data/" + name + "_PointCloud_Cartesian.txt";
     writematrix(cartesian_points, outfile, 'Delimiter', ' ');
 
